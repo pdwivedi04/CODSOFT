@@ -8,7 +8,7 @@ class CompareUserGuess
 	static int randomNum;
 	static int userInputNum;
 	static int i = 0;
-	int j=5;
+	static int j=5;
 	
 	//initializing getRandomNum() method to get the random integer value.
 	int getRandomNum()
@@ -100,8 +100,9 @@ class CompareUserGuess
 					
 		}
 
-	void playAgain()
+	void playAgain(int j)
 		{
+		this.j = j;
 			compare(getUserInputNum(),getRandomNum());
 			//if (userInputNum != randomNum)
 				//fiveAttempts (userInputNum, randomNum);
@@ -138,7 +139,7 @@ class NumberGame
 					int j=5;
 					while(i<5)
 						{
-							ob.playAgain();
+							ob.playAgain(j);
 							i++;
 							j--;
 							
