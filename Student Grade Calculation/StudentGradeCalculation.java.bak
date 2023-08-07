@@ -1,0 +1,75 @@
+import java.util.*;
+class StudentGradeCalculation
+{
+	float hindi;
+	float english;
+	float math;
+	float physics;
+	float chemistry;
+	float computer;
+
+	StudentGradeCalculation()
+	{
+		Scanner s = new Scanner(System.in);
+		System.out.println("Please Enter Hindi Marks");
+		this.hindi = s.nextFloat();
+		System.out.println("Please Enter english Marks");
+		this.english = s.nextFloat();
+		System.out.println("Please Enter math Marks");
+		this.math = s.nextFloat();
+		System.out.println("Please Enter physics Marks");
+		this.physics = s.nextFloat();
+		System.out.println("Please Enter chemistry Marks");
+		this.chemistry = s.nextFloat();
+		System.out.println("Please Enter computer Marks");
+		this.computer = s.nextFloat();
+
+	
+
+
+		
+		/*
+		ArrayList<String> subList = new ArrayList<String>();
+		subList.add("hindi");
+		subList.add("english");
+		subList.add("math");
+		subList.add("physics");
+		subList.add("chemistry");
+		subList.add("Computer");
+		Scanner s = new Scanner(System.in);
+		int i = 0;
+		float a;
+		while (i<6)
+			{ 
+				System.out.println("Please Enter "+subList.get(i)+" Marks");
+				float submark = s.nextFloat();
+				if (submark<=0 || submark>=100)
+				{
+					System.out.println("Please enter correct value");
+					continue;
+				}
+				Map<String,Float> map= new LinkedHashMap<>();
+				map.put(subList.get(i),submark);
+				i++;
+			}
+
+		return map;
+		*/
+
+
+	}
+}
+
+
+
+
+
+
+class StudentResult 
+{
+	public static void main(String[] args) 
+	{
+		StudentGradeCalculation 
+		System.out.println("Hello World!");
+	}
+}
