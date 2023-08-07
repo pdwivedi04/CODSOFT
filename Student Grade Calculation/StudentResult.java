@@ -2,6 +2,7 @@ import java.util.*;
 class StudentGradeCalculation
 {
 	float submark;
+	float totalmarks = 0.0f;
 	boolean b = false;
 	Map<String,Float> map = new LinkedHashMap<>();
 	StudentGradeCalculation()
@@ -38,7 +39,7 @@ class StudentGradeCalculation
 
 	float totalMarksCalculation()
 		{
-			float totalmarks = 0.0f;
+			//float totalmarks = 0.0f;
 			for (float f : map.values()) 
 			//for (float f : readData().values()) 
 				{
@@ -50,7 +51,7 @@ class StudentGradeCalculation
 
 	float percentageCalculation()
 		{
-			float percentage = ((float)(totalMarksCalculation()*100)/600);
+			float percentage = ((float)(totalmarks*100)/600);
 
 			return percentage;
 		}
@@ -58,9 +59,27 @@ class StudentGradeCalculation
 	boolean m2()
 			{
 				//boolean b = false;
+
+				for(Map.Entry<String, Float> entry : map.entrySet())
+					{
+					if(entry.getValue() > 0 && entry.getValue()<35)
+						{
 				
-				if (submark>=0 && submark<35)
-					b = true;
+				/*for (float f : map.values()) 
+			//for (float f : readData().values()) 
+				{
+					if (f>=0 && f<35)
+						b = true;
+						break;
+
+				}
+				//if (submark>=0 && submark<35)
+					
+				*/
+							b = true;
+							break;
+						 }
+					}
 				return b;	
 			}
 
@@ -71,7 +90,7 @@ class StudentGradeCalculation
 			
 			if (h ==true)
 			{
-				return "fail";
+				return "The result is fail";
 			}
 			else if (g>= 70 && g<=100)
 			{
@@ -91,7 +110,7 @@ class StudentGradeCalculation
 			}
 			else
 			{
-				return "Fail";
+				return "The result is fail";
 			}
 			
 		}
@@ -125,8 +144,21 @@ class StudentResult
 {
 	public static void main(String[] args) 
 	{
-		StudentGradeCalculation ob = new StudentGradeCalculation();
-		ob.resultDisplay();
+		boolean boo = false;
+		//StudentGradeCalculation ob = new StudentGradeCalculation();
+		Scanner s = new Scanner(System.in);
+		do
+		{
+			StudentGradeCalculation ob = new StudentGradeCalculation();
+			ob.resultDisplay();
+			System.out.println("If you want to calculate other student's result press 1 otherwise press 2 to quit the calculation");
+			int t = s.nextInt();
+			int f =1;
+			boo = (t == f);
+			
+		}
+		while (boo);
+		//ob.resultDisplay();
 		//System.out.println("Hello World!");
 	}
 }
