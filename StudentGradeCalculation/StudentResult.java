@@ -171,7 +171,7 @@ class StudentGradeCalculation
 
 class StudentResult 
 {
-	static Scanner s = new Scanner(System.in);
+	Scanner s = new Scanner(System.in);
 	public static void main(String[] args) 
 	{
 		boolean boo = false;

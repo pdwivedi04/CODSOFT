@@ -4,10 +4,6 @@ import java.util.*;
 //initializing sub class for Student Grade Calculation.
 class StudentGradeCalculation
 {
-	//public static final String WHITE_BACKGROUND = "\u001B[47m";
-	public static final String BLACK = "\u001B[30m";
-	public static final String GREEN = "\u001B[32m";
-	public static final String ANSI_RESET = "\u001B[0m";
 
 	//initializing instance variables of sub class 'Student Grade Calculation'.
 	float submark;
@@ -52,7 +48,7 @@ class StudentGradeCalculation
 					submark = StudentResult.s.nextFloat();
 					if (submark<=0 || submark>=100)
 					{
-						System.out.println("\u001B[31m" + "Please enter correct value" + "\u001B[0m");
+						System.out.println("Please enter correct value");
 						continue;
 					}
 					//map= new LinkedHashMap<>(); // already initialized
